@@ -47,20 +47,18 @@ def write_wc(inFile, outFile):
       
 
 def wc_lines(filepath):
-    """ Reading text file at location filepath, counts number of words on each line 
-    and returns a list of these counts.""" 
+    """ Reading text file at location filepath, counts number of words on each line and returns a list.""" 
     wc_lines = []
     with open(filepath) as fh:
         text = fh.readlines()
     for line in text:
-        wc_lines.append(len(re.compile('\w+').findall(line.lower())))   
+        wc_lines.append(len(re.compile('\w+').findall(line)))   
     return wc_lines 
 
 def run_medians(numlist):
     """ Given a list of integers, returns a generator of running medians.
     The method uses 2 heaps (max heap/min heap) and places streaming numbers in either of the 
-    heap depending on their values. The way median is found depends if the heaps are balanced or not.
-    """
+    heap depending on their values. The way median is found depends if the heaps are balanced or not. """
     itnum = iter(numlist)
     less, more = [], []   
     first = next(itnum)
