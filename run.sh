@@ -11,8 +11,8 @@ python ./src/wc.py --both ./
 # usage: python wc.py {--wcount | --rmedian | --both} [path to wc_input dir]
 
 # --wcount:   counts the word frequencies only
-# --rmedian:    counts the running median only
-# --both:   counts both		
+# --rmedian:  counts the running median only
+# --both:     counts both		
 
 
 
